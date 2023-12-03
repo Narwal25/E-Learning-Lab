@@ -1,0 +1,40 @@
+<!-- faq_page.html -->
+
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+{% load static %}
+
+<!-- Black strip with FAQ text -->
+<div class="container-fluid bg-dark-strip text-light text-center py-3 my-5">
+    <h3 >FAQ'S</h3>
+</div>
+
+<!-- FAQ container -->
+<div class="container my-5 ">
+    <div class="accordion" id="faqAccordion">
+        <!-- Fetch questions from the database and loop through them -->
+        {% for faq in faqs %}
+            <div class="card mb-2">
+                <div class="card-header "  id="faqHeading{{ faq.id }}">
+                    <h3 class="mb-0">
+                        <a class="btn btn-link " data-toggle="collapse" data-target="#faqCollapse{{ faq.id }}"  aria-expanded="true" aria-controls="faqCollapse{{ faq.id }}">
+                            {{ faq.question }} <span class="icon"></span>
+                        </a>
+                    </h3>
+                </div>
+
+                <div id="faqCollapse{{ faq.id }}" class="collapse" aria-labelledby="faqHeading{{ faq.id }}" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        {{ faq.answer }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
