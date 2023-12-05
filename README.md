@@ -1,172 +1,54 @@
-<h1 align="center">E-Learning Lab</h1>
+# E-Learning Lab
 
-<h5 align="center"> (previously Virtual Learning Lab) </h5>
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/iamTanTan/E-Learning_Lab?color=56BEB8">
+## Overview
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/iamTanTan/E-Learning_Lab?color=56BEB8">
+E-Learning Lab is a Django-based learning platform developed for Bridge2Africa, a non-profit organization in South Africa. The platform aims to bring STEM (Science, Technology, Engineering, and Mathematics) content to students worldwide. It offers a variety of components to enhance the learning experience:
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/iamTanTan/E-Learning_Lab?color=56BEB8">
+## Components
 
-  <img alt="License" src="https://img.shields.io/github/license/iamTanTan/E-Learning_Lab?color=56BEB8">
+1. **Admin Panel Component**
+   - Manages classes using Django admin tools.
 
-</p>
+2. **Student Component**
+   - Provides a student dashboard for courses and assessments.
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-</p>
+3. **Home Component**
+   - Serves as the main landing page.
 
-<br>
+4. **Courses Component**
+   - Displays various available courses.
 
-## :dart: About
+5. **Discussion Board Component**
+   - Allows for discussions related to courses.
 
-This website is for a Non-profit in South Africa called Bridge2Africa.
-The website is a learning platform aiming to bring STEM content to students all over the world. The website contains different courses where students can learn
-and an admin panel to add classes. It uses the Django admin tools and user
-authentication technology.
+6. **FAQ Component**
+   - Includes frequently asked questions about the platform.
 
-(You can use username: demo, password: demo1 to login to the website)
+## Getting Started
 
-Admin panel demo: https://www.youtube.com/embed/PvA5yy0Z74E
+1. Clone the project: `git clone https://github.com/Narwal25/E-Learning-Lab.git`
+2. Access the project directory: `cd E-Learning-Lab/`
+3. Create a virtual environment: `python -m venv venv`
+4. Activate the virtual environment: `venv/Scripts/activate`
+5. Install dependencies: `pip install -r requirements.txt`
+6. Run the app: `python manage.py runserver`
 
-## :rocket: Technologies
+## Helpful Resources
 
-The following tools were used in this project:
+- [E-Learning Lab Video Walkthrough Series](https://www.youtube.com/playlist?list=PLk_larcd6unLqjW1qg5J9ubESzXW8rH7x)
+- [Installing Pip](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+- [Django Tutorial](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
 
--   [Python](https://www.python.org)
--   [Django](https://www.djangoproject.com/)
--   [HTML/CSS]
--   [Bootstrap](https://getbootstrap.com/)
+## License
 
-## :white_check_mark: Requirements
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com)  
-Download Python 3.7.9 at https://www.python.org/  
-Download an IDE, preferably [VS code](https://code.visualstudio.com/download). Load project into the IDE
+## Project Origin
 
-## :checkered_flag: Starting
+Originally imported from [Adriane Inocencio's repository](https://github.com/adriane0523/VirtualLearningLab).
 
-```bash
-# Clone this project
-git clone https://github.com/Abhiraj03/E-Learning-Lab.git
+## FAQ Page Addition
 
-# Access
-cd VirtualLearningLab/
-
-# create a virutal enviroment to install your dependencies,
-python -m venv venv
-
-#activate it you should see (venv)
-venv/Scripts/activate
-
-#install dependencies
-pip install -r requirements.txt
-
-#run the app
-python manage.py runserver
-```
-```bash
-#helpful commands:
-#updating static folder
-python manage.py collectstatic
-
-#updating database models
-python manage.py makemigrations
-python manage.py migrate
-```
-
-## Whats in the project
-
-### Admin Panel Component
-
-https://elearning-lab.org/admin/  
-<website link>/admin => Developer admin panel (this came with Djano)
-
-https://elearning-lab.org/admin_panel/  
-<website link>/admin_panel => “user” admin panel (created)
-There are two different admin panels, one is meant for a developer to look over and the other one is meant for the organization to use. I personally thought the admin panel for developers is confusing to the normal user so creating another admin panel for the Birdge2Africa organizations was needed. However, the user Admin panel still uses elements of the developer admin panel.
-
-### Student Component
-
-https://elearning-lab.org/student/welcome/28e4a600-54f3-476b-93d3-8c97d06f7283  
-Holds the different course home, modules, connect, reading material, and assessments. Assessments uses google form for quizzes
-
-### Home Component
-
-https://elearning-lab.org/  
-Holds the UI for the main page
-
-### Courses Component
-
-https://elearning-lab.org/courses  
-Holds the UI for courses
-
-### Discussion Board Component
-
-https://github.com/E-Learning-Lab/E-Learning_Lab/tree/main/Components/discussion_board  
-Contains the models, routes, views, and forms for the discussion board component. A course can contain many discussion boards associated with it. Upvotes/downvotes and profanity checker in place at this time.
-
-### Virutallearninglab folder
-
-https://github.com/E-Learning-Lab/E-Learning_Lab/tree/main/virtuallearninglab  
-Main folder, it holds the UI for login and register, base templates for each page, routing, and settings of the project
-
-### asset/static folder
-
-holds the css files and images (there are two because when website is deployed it looks at static folder). The collectstatic brings static files from all locations to the static folder and then serves them to the website from that folder.
-
-### media folder
-
-upload photos (currently not working)
-
-## Related links and Helpful Resources
-  
-E-Learning Lab Video Walkthrough Series - https://www.youtube.com/playlist?list=PLk_larcd6unLqjW1qg5J9ubESzXW8rH7x
-
-installing pip - https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-
-virtualenvs stackoverflow post = https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one
-
-login and register - https://levelup.gitconnected.com/how-to-implement-login-logout-and-registration-with-djangos-user-model-59442164db73
-
-Django tutorial - https://docs.djangoproject.com/en/3.1/intro/tutorial01/
-
-Django 4 hour tutorial - https://www.freecodecamp.org/news/python-django-course/
-
-Django portfolio - https://realpython.com/get-started-with-django-1/
-
-Bootstrap Cheat Sheet - https://hackerthemes.com/bootstrap-cheatsheet/
-
-Git Cheat Sheet - https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
-
-## Dependencies
-
--   https://pypi.org/project/django-embed-video/
--   https://pypi.org/project/django-ckeditor/
--   https://pypi.org/project/django-tinymce/
--   https://django-crispy-forms.readthedocs.io/en/latest/
--   https://django-vote.readthedocs.io/en/latest/
--   https://pypi.org/project/django-profanity-check/
--   https://github.com/sswapnil2/django-quiz-app
-
-## Production Site
-
-<h3>Production site is located at https://github.com/adriane0523/VirtualLearningLab</h3>
-  
-https://elearning-lab.org/  
-Hosted on Digital Ocean.  
-For more specifics on the deployment process, view the Google Drive (info will be added soon).
-
-## :memo: License
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-Created by: Phillippe Adriane Inocencio & ASU EPICS
-&#xa0;
-
-<a href="#top">Back to top</a>
+The FAQ Page feature was added by [Pardeep Narwal](https://github.com/Narwal25).
 
